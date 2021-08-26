@@ -1,0 +1,23 @@
+.logo {
+height: 100%;
+width: 100%;
+}
+
+.menu {
+    background-color: #437085;
+}
+
+.header {
+    
+}
+
+#nav-header1, #nav-header2, #nav-header3 {
+    font-family: 'Lucida Sans',Geneva, Verdana, sans-serif;
+     color: white;
+}
+
+#nav-header1:hover,
+#nav-header2:hover
+{
+    color: rgb(184, 182, 182);
+}

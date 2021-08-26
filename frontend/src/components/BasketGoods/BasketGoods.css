@@ -1,0 +1,55 @@
+.basket-title {
+    padding: 10px;
+    color: rgb(58, 99, 146);
+}
+
+.btn-basket {
+    padding-top: 10px;
+}
+
+/* .goods-to-order {
+    min-width: 1000px;
+} */
+
+.form-basket {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+#border {
+    width: 1000px;
+    height: 100px;
+    background: #95adc734;
+    color: black; 
+    border-bottom-width: 1px; 
+    border-bottom-style: solid; 
+    border-bottom-color: rgba(216, 197, 197, 0.966);
+}
+
+#image {
+    margin: 0px;
+    min-width: 0px;
+    max-width: 100%;
+    height: auto;
+    width: 100px;
+}
+
+.type-heading {
+    width: 150px;
+}
+.title-heading {
+    width: 150px;
+}
+
+.price-heading {
+    width: 120px;
+}
+
+.del {
+    color:brown;
+    padding: 0;
+    border: none;
+    font: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.navi {
+    background-color: #437085;
+}
+
+#nav {
+    /* flex: 0 0 auto; */
+    width: 100%;
+    padding-bottom: 10px;
+   
+    
+}
+
+.nav-l {
+    color: white;
+    text-decoration: none;
+    font-family: 'Lucida Sans',Geneva, Verdana, sans-serif;
+}
+
+.nav-l:hover {
+    color: rgb(184, 182, 182);
+    text-decoration: none;
+}
