@@ -6,7 +6,8 @@ import Navigation from '../Navigation';
 import BasketGoods from '../BasketGoods/BasketGoods.js';
 import MainMenu from '../MainMenu';
 import OrderPage from '../OrderPage/Orderpage.js';
-// import Footer from '../Footer/Footer.js';
+import { getProduct } from '../../store/actions/AppActions.js';
+import { connect } from 'react-redux';
 import { Container, Col } from 'reactstrap';
 import {
   BrowserRouter as Router,
@@ -14,7 +15,7 @@ import {
 } from "react-router-dom";
 
 
-function App() {
+function App(props) {
 
   const [uuid, setUuid] = useState("");
 
@@ -34,14 +35,20 @@ function App() {
     }
   };
 
-  const [products, setItems] = useState([]);
+  const { products } = props;
 
-  useEffect(() => {
-    fetch('/api/goods')
-      .then(res => res.json())
-      .then((result) => setItems(result))
-      .catch((e) => console.log(e))
+  // const [products, setItems] = useState([]);
+
+  useEffect(() =>{
+    dispatch (getProduct())
   }, [])
+
+  // useEffect(() => {
+  //   fetch('/api/goods')
+  //     .then(res => res.json())
+  //     .then((result) => setItems(result))
+  //     .catch((e) => console.log(e))
+  // }, [])
 
 
 
@@ -83,9 +90,21 @@ function App() {
           </Col>
         </Container>
       </div>
-      {/* <Footer /> */}
     </Router>
   );
 }
 
-export default App;
+const mapStateToProps = store => {
+  return {
+    app: store.app,
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  getProduct: products => dispatch(getProduct()),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
