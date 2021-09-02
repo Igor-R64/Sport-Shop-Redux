@@ -1,4 +1,3 @@
-export const GET_CARDS_REQUEST = 'GET_CARDS_REQUEST';
 export const SET_ITEMS = 'SET_ITEMS';
 export const ERROR = 'ERROR';
 

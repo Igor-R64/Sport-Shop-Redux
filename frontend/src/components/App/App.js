@@ -57,6 +57,8 @@ function App(props) {
             <Route path='/products'>
               <CardProduct
                 products = {app.products}
+                isFetching = {app.isFetching}
+                error={app.error}
                 goodsForOrder={goodsForOrder}
                 addGoodToBasket={addGoodToBasket} />
             </Route>
