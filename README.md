@@ -12,7 +12,7 @@ React, Redux, клиентский роутинг ( React Router).
 Чтобы клонировать весь репозиторий, просто запустите:
 
 ```bash
-git clone https://github.com/Igor-R64/Sport-Shop
+git clone https://github.com/Igor-R64/Sport-Shop-Redux
 ```
 
 
