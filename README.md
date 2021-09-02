@@ -15,17 +15,6 @@ React, Redux, клиентский роутинг ( React Router).
 git clone https://github.com/Igor-R64/Sport-Shop
 ```
 
-Войдите в backend каталог:
-```
-cd backend
-```
-и запустите там следующие команды:
-```
-npm i
-```
-```
-npm start
-```
 
 Войдите в frontend каталог в новом терминале:
 ```
@@ -35,6 +24,10 @@ cd frontend
 ```
 npm i
 ```
+```
+npm start ex
+```
+
 ```
 npm start
 ```

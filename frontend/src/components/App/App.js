@@ -16,7 +16,7 @@ import {
 
 
 function App(props) {
-
+  
   const [uuid, setUuid] = useState("");
 
   const [goodsForOrder, updateBasket] = useState([]);
@@ -35,21 +35,11 @@ function App(props) {
     }
   };
 
-  const { products } = props;
-
-  // const [products, setItems] = useState([]);
-
-  useEffect(() =>{
-    dispatch (getProduct())
+  useEffect(() => {
+    props.getProduct()
   }, [])
 
-  // useEffect(() => {
-  //   fetch('/api/goods')
-  //     .then(res => res.json())
-  //     .then((result) => setItems(result))
-  //     .catch((e) => console.log(e))
-  // }, [])
-
+  const { app } = props;
 
 
   return (
@@ -66,6 +56,7 @@ function App(props) {
           <Col sm="12" className="d-flex flex-wrap justify-content-around">
             <Route path='/products'>
               <CardProduct
+                products = {app.products}
                 goodsForOrder={goodsForOrder}
                 addGoodToBasket={addGoodToBasket} />
             </Route>
@@ -80,7 +71,6 @@ function App(props) {
             <Route path='/basket'>
               <BasketGoods
                 setUuid={setUuid}
-                products={products}
                 clearBasket={clearBasket}
                 goodsForOrder={goodsForOrder}
                 addGoodToBasket={addGoodToBasket}

@@ -4,6 +4,7 @@ import { FaCartPlus, FaRubleSign } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 
 import './BasketGoods.css';
@@ -164,4 +165,10 @@ BasketGoods.propTypes = {
     addGoodToBasket: PropTypes.array,
 }
 
-export default BasketGoods;
+const mapStateToProps = store => {
+    return {
+      products: store.app.products,
+    }
+  }
+  
+  export default connect(mapStateToProps)(BasketGoods);

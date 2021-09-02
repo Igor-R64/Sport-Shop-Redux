@@ -1,11 +1,10 @@
-export const GET_CARDS_REQUEST = 'GET_CARDS_REQUEST'
+export const GET_CARDS_REQUEST = 'GET_CARDS_REQUEST';
+export const SET_ITEMS = 'SET_ITEMS';
+export const ERROR = 'ERROR';
 
 
 export function getProduct() {
     return function (dispatch) {
-        dispatch({
-            type: GET_CARDS_REQUEST,
-        })
         fetch('/api/goods')
             .then(res => res.json())
             .then((result) => dispatch({
@@ -14,7 +13,8 @@ export function getProduct() {
             }))
             .catch((e) => dispatch({
                 type: ERROR,
-                payload: e,
+                error: true,
+                payload: new Error(e),
             }))
     }
 }
